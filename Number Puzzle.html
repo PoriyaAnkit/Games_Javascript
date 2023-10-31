@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Puzzel</title>
+
+
+	<style type="text/css">
+		body {
+			width: 100wh;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container {
+			width: 200px;
+			padding: 30px;
+			border: 2px solid black;
+		}
+
+		.row {
+			justify-content: center;
+			display: flex;
+		}
+
+		.btn {
+			height: 60px;
+			width: 80px;
+			font-size: 40px;
+			/*			margin-bottom: 20px;*/
+		}
+
+		.btn1 {
+			width: 150px;
+			height: 50px;
+			font-size: 20px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div class=" container ">
+		<div class="row">
+			<input type="button" class="btn" name="" id="btn0" onclick="even(0)">
+			<input type="button" class="btn" name="" id="btn1" onclick="even1(1)">
+			<input type="button" class="btn" name="" id="btn2" onclick="even2(2)">
+		</div>
+		<div class="row">
+			<input type="button" class="btn" name="" id="btn3" onclick="even3(3)">
+			<input type="button" class="btn" name="" id="btn4" onclick="even4(4)">
+			<input type="button" class="btn" name="" id="btn5" onclick="even5(5)">
+		</div>
+		<div class="row">
+			<input type="button" class="btn" name="" id="btn6" onclick="even6(6)">
+			<input type="button" class="btn" name="" id="btn7" onclick="even7(7)">
+			<input type="button" class="btn" name="" id="btn8" onclick="even8(8)">
+		</div>
+		<div class="winner">
+			<h2 id="winner"> </h2>
+		</div>
+		<div>
+			<button class="btn1" id="restore" onclick="restart()">Reset button</button>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+
+
+
+		var btn0 = document.getElementById("btn0");
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var btn5 = document.getElementById("btn5");
+		var btn6 = document.getElementById("btn6");
+		var btn7 = document.getElementById("btn7");
+		var btn8 = document.getElementById("btn8");
+
+		var y = document.getElementById("winner");
+
+		var allbutton = document.querySelectorAll(".btn");
+
+
+
+
+
+
+
+
+
+		function even(n) {
+
+			// document.getElementById("btn" + n).value;
+
+			if (btn3.value == "") {
+				btn3.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+
+			}
+			if (btn1.value == "") {
+				btn1.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+
+		}
+
+		function even1(n) {
+			// var a=document.getElementById("btn" + n).value;
+
+			// console.log(btn0.value);
+			if (btn0.value == "") {
+				btn0.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn2.value == "") {
+				btn2.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn4.value == "") {
+				btn4.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+		function even2(n) {
+
+			if (btn1.value == "") {
+				btn1.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn5.value == "") {
+				btn5.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+		function even3(n) {
+
+			if (btn0.value == "") {
+				btn0.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn4.value == "") {
+				btn4.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn6.value == "") {
+				btn6.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+		function even4(n) {
+
+			if (btn1.value == "") {
+				btn1.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn3.value == "") {
+				btn3.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn5.value == "") {
+				btn5.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn7.value == "") {
+				btn7.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+
+		function even5(n) {
+			if (btn2.value == "") {
+				btn2.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn4.value == "") {
+				btn4.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+			}
+			if (btn8.value == "") {
+				btn8.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+		function even6(n) {
+			if (btn3.value == "") {
+				btn3.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn7.value == "") {
+				btn7.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+		function even7(n) {
+			if (btn6.value == "") {
+				btn6.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn4.value == "") {
+				btn4.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn8.value == "") {
+				btn8.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+		function even8(n) {
+			if (btn7.value == "") {
+				btn7.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+			if (btn5.value == "") {
+				btn5.value = document.getElementById("btn" + n).value;
+				document.getElementById("btn" + n).value = "";
+				win();
+			}
+		}
+
+
+		function win() {
+
+			if (btn0.value == 0 && btn1.value == 1 && btn2.value == 2 &&
+				btn3.value == 3 && btn4.value == 4 && btn5.value == 5 &&
+				btn6.value == 6 && btn7.value == 7 && btn8.value == "") {
+				y.innerText = "You Are Winner";
+			}
+
+		}
+
+		restart();
+
+		function restart() {
+
+			for (var index = 0; index < allbutton.length; index++) {
+				allbutton[index].value = "";
+				console.log(allbutton);
+				y.innerText = "";
+
+			}
+
+
+
+
+			// for( var i=0; i<9;)
+			// {
+			// 	var x=Math.floor(Math.random()*9)
+
+			// 	if(!arr.includes(x))
+			// 	{
+			// 		arr.push(x);
+			// 		i++;
+
+			// 		// console.log(arr);
+			// 	}
+			// }
+			// for(var i=0; i<allbutton.length ; i++)
+			// {
+			// 	if(arr[i] == 0)
+			// 	{
+			// 		arr[i]="";
+			// 	}
+			// }
+
+			// for(var i=0; i<allbutton.length ; i++)
+			// {
+			// 	// allbutton.value=arr[i];
+			// 	document.getElementById('btn'+i).value=arr[i];
+
+
+			// }
+			var arr = [];
+			var index = 0;
+
+			while (arr.length <= 9) {
+				var num = Math.floor(Math.random() * 9);
+				console.log(arr);
+				if (arr.indexOf(num) == -1) {
+					arr[index] = num;
+					index++;
+					console.log(arr[index]);
+
+					arr[index] = "";
+				}
+			}
+
+
+
+			for (var index = 0; index <= allbutton.length; index++) {
+
+				if (arr[index] == 0) {
+					allbutton[index].value = "";
+				}
+				else {
+					allbutton[index].value = arr[index];
+
+				}
+			}
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>
